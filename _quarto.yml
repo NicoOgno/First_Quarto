@@ -15,10 +15,10 @@ website:
 
 format:
   html:
-    theme:   # Puedes cambiar a otro tema si lo deseas
+    theme:
       light: cosmo
       dark: darkly
-    css: styles.css
+    css: styles.css # Puedes seleccionar w3.css para otros estilos
     toc: true
 
 
