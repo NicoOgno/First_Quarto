@@ -3,6 +3,7 @@ project:
 
 website:
   title: "JS Playground"
+  reader-mode: true
   navbar:
     left:
       - href: index.qmd
@@ -14,7 +15,9 @@ website:
 
 format:
   html:
-    theme: cosmo  # Puedes cambiar a otro tema si lo deseas
+    theme:   # Puedes cambiar a otro tema si lo deseas
+      light: cosmo
+      dark: darkly
     css: styles.css
     toc: true
 

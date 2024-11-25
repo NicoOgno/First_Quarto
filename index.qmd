@@ -2,7 +2,7 @@
 title: "Javascript Playground"
 ---
 
-# Bienvenido al Playground Oficial de Javascript con Quarto
+# Bienvenido al Playground Oficial de Javascript creado con Quarto
 
 Esta es una página para probar códigos de Javascript. En este sitio podrás jugar y testear tus snippets.
 
