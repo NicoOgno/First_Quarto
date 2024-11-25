@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "JS CheatSheet",
+    "section": "",
+    "text": "Snippets para arrancar como avión!!\n\n\n\n\nif ((age &gt;= 14) && (age &lt; 19)) { // logical condition\nstatus = \"Eligible.\"; // executed if condition is true\n} else { // else block is optional\nstatus = \"Not eligible.\"; } // executed if condition is false\n\n\n\nswitch (new Date().getDay()) { // input is current day\ncase 6: // if (day == 6)\ntext = \"Saturday\";\nbreak;\ncase 0: // if (day == 0)\ntext = \"Sunday\";\nbreak;\ndefault: // else…\ntext = \"Whatever\"; }\n\n\n\n\n\n\nfor (var i = 0; i &lt; 10; i++) {\ndocument.write(i + \": \" + i*3 + \"&lt;br /&gt;\");\n}\nvar sum = 0;\nfor (var i = 0; i &lt; a.length; i++) {\nsum + = a[i];\n} // parsing an array\nhtml = \"\";\nfor (var i of custOrder) {\nhtml += \"&lt;li&gt;\" + i + \"&lt;/li&gt;\";\n}\n\n\n\nvar i = 1; // initialize\nwhile (i &lt; 100) { // enters the cycle if statement is true\ni *= 2; // increment to avoid infinite loop\ndocument.write(i + \", \"); // output\n}\n\n\n\nvar i = 1; // initialize\ndo { // enters cycle at least once\ni *= 2; // increment to avoid infinite loop\ndocument.write(i + \", \"); // output\n} while (i &lt; 100) // repeats cycle if statement is true at the end\n\n\n\nfor (var i = 0; i &lt; 10; i++) {\nif (i == 5) { break; } // stops and exits the cycle\ndocument.write(i + \", \"); // last output number is 4\n}\n\n\n\nfor (var i = 0; i &lt; 10; i++) {\nif (i == 5) { continue; } // skips the rest of the cycle\ndocument.write(i + \", \"); // skips 5\n}\n\n\n\n\nvar abc = \"abcdefghijklmnopqrstuvwxyz\";\nvar esc = 'I don\\'t \\n know'; // new line\nvar len = abc.length; // string length\nabc.indexOf(\"lmno\"); // find substring, -1 if doesn’t contain\nabc.lastIndexOf(\"lmno\"); // last occurance\nabc.slice(3, 6); // cuts out “def”, negative values count from behind\nabc.replace(\"abc\",\"123\"); // find and replace, takes regular expressions\nabc.toUpperCase(); // convert to upper case\nabc.toLowerCase(); // convert to lower case\nabc.concat(\" \", str2); // abc + ” ” + str2\nabc.charAt(2); // character at index: “c”\nabc[2]; // unsafe, abc[2] = “C” doesn’t work\nabc.charCodeAt(2); // character code at index: “c” -&gt; 99\nabc.split(\",\"); // splitting a string on commas gives an array\nabc.split(\"\"); // splitting on characters\n128.toString(16); // number to hex(16), octal (8) or binary (2)\n\n\n\nvar age = 18; // number\nvar name = \"Jane\"; // string\nvar name = {first:\"Jane\", last:\"Doe\"}; // object\nvar truth = false; // boolean\nvar sheets = [\"HTML\",\"CSS\",\"JS\"]; // array\nvar a; typeof a; // undefined\nvar a = null;\n\n\n\n\n\nvar pi = 3.141; pi.toFixed(0); // returns 3\npi.toFixed(2); // returns 3.14 - for working with money\npi.toPrecision(2) // returns 3.1\npi.valueOf(); // returns number\nNumber(true); // converts to number\nNumber(new Date()) // number of milliseconds since 1970\nparseInt(\"3 months\"); // returns the first number: 3\nparseFloat(\"3.5 days\"); // returns 3.5\nNumber.MAX_VALUE // largest possible JS number\nNumber.MIN_VALUE // smallest possible JS number\nNumber.NEGATIVE_INFINITY // -Infinity\nNumber.POSITIVE_INFINITY // Infinity\n\n\n\nvar pi = Math.PI; // 3.141592653589793\nMath.round(4.4); // = 4 - rounded\nMath.round(4.5); // = 5\nMath.pow(2,8); // = 256 - 2 to the power of 8\nMath.sqrt(49); // = 7 - square root\nMath.abs(-3.14); // = 3.14 - absolute, positive value\nMath.ceil(3.14); // = 4 - rounded up\nMath.floor(3.99); // = 3 - rounded down\nMath.sin(0); // = 0 - sine\nMath.cos(Math.PI); // OTHERS: tan,atan,asin,acos,\nMath.min(0, 3, -2, 2); // = -2 - the lowest value\nMath.max(0, 3, -2, 2); // = 3 - the highest value\nMath.log(1); // = 0 natural logarithm\nMath.exp(1); // = 2.7182pow(E,x)\nMath.random(); // random number between 0 and 1\nMath.floor(Math.random() * 5) + 1; // random integer, from 1 to 5\n\n\n\n\nfunction addNumbers(a, b) { return a + b; ; }\nx = addNumbers(1, 2);\n\n\n\nvar a; // variable\nvar b = \"init\"; // string\nvar c = \"Hi\" + \" \" + \"Joe\"; // = “Hi Joe”\nvar d = 1 + 2 + \"3\"; // = “33”\nvar e = [2,3,5,8]; // array\nvar f = false; // boolean\nvar g = /()/; // RegEx\nvar h = function(){}; // function object\nconst PI = 3.14; // constant\nvar a = 1, b = 2, c = a + b; // one line\nlet z = 'zzz'; // block scope local variable\n\n\n\na = b + c - d; // addition, substraction\na = b * (c / d); // multiplication, division\nx = 100 % 48; // modulo. 100 / 48 remainder = 4\na++; b--; // postfix increment and decrement\n\n\n\n\n\nvar dogs = [\"Bulldog\", \"Beagle\", \"Labrador\"];\nvar dogs = new Array(\"Bulldog\", \"Beagle\", \"Labrador\"); // declaration\nalert(dogs[1]); // access value at index, first item being [0]\ndogs[0] = \"Bull Terier\"; // change the first item\nfor (var i = 0; i &lt; dogs.length; i++) { // parsing with array.length\nconsole.log(dogs[i]);\n}\n\n\n\ndogs.toString(); // convert to string: results “Bulldog,Beagle,Labrador”\ndogs.join(\" * \"); // join: “Bulldog * Beagle * Labrador”\ndogs.pop(); // remove last element\ndogs.push(\"Chihuahua\"); // add new element to the end\ndogs[dogs.length] = \"Chihuahua\"; // the same as push\ndogs.shift(); // remove first element\ndogs.unshift(\"Chihuahua\"); // add new element to the beginning\ndelete dogs[0]; // change element to undefined (not recommended)\ndogs.splice(2, 0, \"Pug\", \"Boxer\"); // add elements (where, how many to remove, element list)\nvar animals = dogs.concat(cats,birds); // join two arrays (dogs followed by cats and birds)\ndogs.slice(1,4); // elements from [1] to [4-1]\ndogs.sort(); // sort string alphabetically\ndogs.reverse(); // sort string in descending order\nx.sort(function(a, b){return a - b}); // numeric sort\nx.sort(function(a, b){return b - a}); // numeric descending sort\nhighest = x[0]; // first item in sorted array is the lowest (or highest) value\nx.sort(function(a, b){return 0.5 - Math.random()}); // random order sort\n\n\n\n\nvar student = { // object name\nfirstName:\"Jane\", // list of properties and values\nlastName:\"Doe\",\nage:18,\nheight:170,\nfullName : function() { // object function\nreturn this.firstName + \" \" + this.lastName;\n} }; student.age = 19; // setting value\nstudent[age]++; // incrementing\nname = student.fullName(); // call object function"
+  },
+  {
+    "objectID": "about.html#conditionals",
+    "href": "about.html#conditionals",
+    "title": "JS CheatSheet",
+    "section": "",
+    "text": "if ((age &gt;= 14) && (age &lt; 19)) { // logical condition\nstatus = \"Eligible.\"; // executed if condition is true\n} else { // else block is optional\nstatus = \"Not eligible.\"; } // executed if condition is false\n\n\n\nswitch (new Date().getDay()) { // input is current day\ncase 6: // if (day == 6)\ntext = \"Saturday\";\nbreak;\ncase 0: // if (day == 0)\ntext = \"Sunday\";\nbreak;\ndefault: // else…\ntext = \"Whatever\"; }"
+  },
+  {
+    "objectID": "about.html#loops",
+    "href": "about.html#loops",
+    "title": "JS CheatSheet",
+    "section": "",
+    "text": "for (var i = 0; i &lt; 10; i++) {\ndocument.write(i + \": \" + i*3 + \"&lt;br /&gt;\");\n}\nvar sum = 0;\nfor (var i = 0; i &lt; a.length; i++) {\nsum + = a[i];\n} // parsing an array\nhtml = \"\";\nfor (var i of custOrder) {\nhtml += \"&lt;li&gt;\" + i + \"&lt;/li&gt;\";\n}\n\n\n\nvar i = 1; // initialize\nwhile (i &lt; 100) { // enters the cycle if statement is true\ni *= 2; // increment to avoid infinite loop\ndocument.write(i + \", \"); // output\n}\n\n\n\nvar i = 1; // initialize\ndo { // enters cycle at least once\ni *= 2; // increment to avoid infinite loop\ndocument.write(i + \", \"); // output\n} while (i &lt; 100) // repeats cycle if statement is true at the end\n\n\n\nfor (var i = 0; i &lt; 10; i++) {\nif (i == 5) { break; } // stops and exits the cycle\ndocument.write(i + \", \"); // last output number is 4\n}\n\n\n\nfor (var i = 0; i &lt; 10; i++) {\nif (i == 5) { continue; } // skips the rest of the cycle\ndocument.write(i + \", \"); // skips 5\n}"
+  },
+  {
+    "objectID": "about.html#strings",
+    "href": "about.html#strings",
+    "title": "JS CheatSheet",
+    "section": "",
+    "text": "var abc = \"abcdefghijklmnopqrstuvwxyz\";\nvar esc = 'I don\\'t \\n know'; // new line\nvar len = abc.length; // string length\nabc.indexOf(\"lmno\"); // find substring, -1 if doesn’t contain\nabc.lastIndexOf(\"lmno\"); // last occurance\nabc.slice(3, 6); // cuts out “def”, negative values count from behind\nabc.replace(\"abc\",\"123\"); // find and replace, takes regular expressions\nabc.toUpperCase(); // convert to upper case\nabc.toLowerCase(); // convert to lower case\nabc.concat(\" \", str2); // abc + ” ” + str2\nabc.charAt(2); // character at index: “c”\nabc[2]; // unsafe, abc[2] = “C” doesn’t work\nabc.charCodeAt(2); // character code at index: “c” -&gt; 99\nabc.split(\",\"); // splitting a string on commas gives an array\nabc.split(\"\"); // splitting on characters\n128.toString(16); // number to hex(16), octal (8) or binary (2)"
+  },
+  {
+    "objectID": "about.html#data-types",
+    "href": "about.html#data-types",
+    "title": "JS CheatSheet",
+    "section": "",
+    "text": "var age = 18; // number\nvar name = \"Jane\"; // string\nvar name = {first:\"Jane\", last:\"Doe\"}; // object\nvar truth = false; // boolean\nvar sheets = [\"HTML\",\"CSS\",\"JS\"]; // array\nvar a; typeof a; // undefined\nvar a = null;"
+  },
+  {
+    "objectID": "about.html#math-and-numbers",
+    "href": "about.html#math-and-numbers",
+    "title": "JS CheatSheet",
+    "section": "",
+    "text": "var pi = 3.141; pi.toFixed(0); // returns 3\npi.toFixed(2); // returns 3.14 - for working with money\npi.toPrecision(2) // returns 3.1\npi.valueOf(); // returns number\nNumber(true); // converts to number\nNumber(new Date()) // number of milliseconds since 1970\nparseInt(\"3 months\"); // returns the first number: 3\nparseFloat(\"3.5 days\"); // returns 3.5\nNumber.MAX_VALUE // largest possible JS number\nNumber.MIN_VALUE // smallest possible JS number\nNumber.NEGATIVE_INFINITY // -Infinity\nNumber.POSITIVE_INFINITY // Infinity\n\n\n\nvar pi = Math.PI; // 3.141592653589793\nMath.round(4.4); // = 4 - rounded\nMath.round(4.5); // = 5\nMath.pow(2,8); // = 256 - 2 to the power of 8\nMath.sqrt(49); // = 7 - square root\nMath.abs(-3.14); // = 3.14 - absolute, positive value\nMath.ceil(3.14); // = 4 - rounded up\nMath.floor(3.99); // = 3 - rounded down\nMath.sin(0); // = 0 - sine\nMath.cos(Math.PI); // OTHERS: tan,atan,asin,acos,\nMath.min(0, 3, -2, 2); // = -2 - the lowest value\nMath.max(0, 3, -2, 2); // = 3 - the highest value\nMath.log(1); // = 0 natural logarithm\nMath.exp(1); // = 2.7182pow(E,x)\nMath.random(); // random number between 0 and 1\nMath.floor(Math.random() * 5) + 1; // random integer, from 1 to 5"
+  },
+  {
+    "objectID": "about.html#function",
+    "href": "about.html#function",
+    "title": "JS CheatSheet",
+    "section": "",
+    "text": "function addNumbers(a, b) { return a + b; ; }\nx = addNumbers(1, 2);"
+  },
+  {
+    "objectID": "about.html#variables",
+    "href": "about.html#variables",
+    "title": "JS CheatSheet",
+    "section": "",
+    "text": "var a; // variable\nvar b = \"init\"; // string\nvar c = \"Hi\" + \" \" + \"Joe\"; // = “Hi Joe”\nvar d = 1 + 2 + \"3\"; // = “33”\nvar e = [2,3,5,8]; // array\nvar f = false; // boolean\nvar g = /()/; // RegEx\nvar h = function(){}; // function object\nconst PI = 3.14; // constant\nvar a = 1, b = 2, c = a + b; // one line\nlet z = 'zzz'; // block scope local variable"
+  },
+  {
+    "objectID": "about.html#operators",
+    "href": "about.html#operators",
+    "title": "JS CheatSheet",
+    "section": "",
+    "text": "a = b + c - d; // addition, substraction\na = b * (c / d); // multiplication, division\nx = 100 % 48; // modulo. 100 / 48 remainder = 4\na++; b--; // postfix increment and decrement"
+  },
+  {
+    "objectID": "about.html#arrays",
+    "href": "about.html#arrays",
+    "title": "JS CheatSheet",
+    "section": "",
+    "text": "var dogs = [\"Bulldog\", \"Beagle\", \"Labrador\"];\nvar dogs = new Array(\"Bulldog\", \"Beagle\", \"Labrador\"); // declaration\nalert(dogs[1]); // access value at index, first item being [0]\ndogs[0] = \"Bull Terier\"; // change the first item\nfor (var i = 0; i &lt; dogs.length; i++) { // parsing with array.length\nconsole.log(dogs[i]);\n}\n\n\n\ndogs.toString(); // convert to string: results “Bulldog,Beagle,Labrador”\ndogs.join(\" * \"); // join: “Bulldog * Beagle * Labrador”\ndogs.pop(); // remove last element\ndogs.push(\"Chihuahua\"); // add new element to the end\ndogs[dogs.length] = \"Chihuahua\"; // the same as push\ndogs.shift(); // remove first element\ndogs.unshift(\"Chihuahua\"); // add new element to the beginning\ndelete dogs[0]; // change element to undefined (not recommended)\ndogs.splice(2, 0, \"Pug\", \"Boxer\"); // add elements (where, how many to remove, element list)\nvar animals = dogs.concat(cats,birds); // join two arrays (dogs followed by cats and birds)\ndogs.slice(1,4); // elements from [1] to [4-1]\ndogs.sort(); // sort string alphabetically\ndogs.reverse(); // sort string in descending order\nx.sort(function(a, b){return a - b}); // numeric sort\nx.sort(function(a, b){return b - a}); // numeric descending sort\nhighest = x[0]; // first item in sorted array is the lowest (or highest) value\nx.sort(function(a, b){return 0.5 - Math.random()}); // random order sort"
+  },
+  {
+    "objectID": "about.html#objects",
+    "href": "about.html#objects",
+    "title": "JS CheatSheet",
+    "section": "",
+    "text": "var student = { // object name\nfirstName:\"Jane\", // list of properties and values\nlastName:\"Doe\",\nage:18,\nheight:170,\nfullName : function() { // object function\nreturn this.firstName + \" \" + this.lastName;\n} }; student.age = 19; // setting value\nstudent[age]++; // incrementing\nname = student.fullName(); // call object function"
+  },
+  {
+    "objectID": "play_js.html",
+    "href": "play_js.html",
+    "title": "Juega con Javascript",
+    "section": "",
+    "text": "Juega con Javascript\n// Escribe tu código aquí...\nconsole.log('¡Hola, mundo!');\n\n\nEjecutar código\n\n\n&lt;!-- Aquí se mostrarán los resultados --&gt;"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Javascript Playground",
+    "section": "",
+    "text": "Bienvenido al Playground Oficial de Javascript creado con Quarto\nEsta es una página para probar códigos de Javascript. En este sitio podrás jugar y testear tus snippets.\nPara aprender más sobre cómo crear sitios web en Quarto, visita la documentación oficial en Quarto Websites. Para aprender más sobre cJavascript, visita esta documentación en Javascript Websites."
+  }
+]

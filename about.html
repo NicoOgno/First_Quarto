@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>JS CheatSheet – JS Playground</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-43df0d6f53b733b42d37fa7808e17715.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-0fad57111af9b032b9e0ff1660053fa5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-b485d9e161c5a1b6e744e2c6fae480f1.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">JS Playground</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./about.html" aria-current="page"> 
+<span class="menu-text">CheatSheet</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./play_js.html"> 
+<span class="menu-text">JS Sandbox</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#javascript-cheat-sheet" id="toc-javascript-cheat-sheet" class="nav-link active" data-scroll-target="#javascript-cheat-sheet">Javascript Cheat Sheet</a>
+  <ul class="collapse">
+  <li><a href="#conditionals" id="toc-conditionals" class="nav-link" data-scroll-target="#conditionals">1. Conditionals</a>
+  <ul class="collapse">
+  <li><a href="#condicional-if" id="toc-condicional-if" class="nav-link" data-scroll-target="#condicional-if">Condicional If</a></li>
+  <li><a href="#condición-switch" id="toc-condición-switch" class="nav-link" data-scroll-target="#condición-switch">Condición Switch</a></li>
+  </ul></li>
+  <li><a href="#loops" id="toc-loops" class="nav-link" data-scroll-target="#loops">2. Loops</a>
+  <ul class="collapse">
+  <li><a href="#for-loop" id="toc-for-loop" class="nav-link" data-scroll-target="#for-loop">For Loop</a></li>
+  <li><a href="#while-loop" id="toc-while-loop" class="nav-link" data-scroll-target="#while-loop">While Loop</a></li>
+  <li><a href="#do-while" id="toc-do-while" class="nav-link" data-scroll-target="#do-while">Do While</a></li>
+  <li><a href="#break" id="toc-break" class="nav-link" data-scroll-target="#break">Break</a></li>
+  <li><a href="#continue" id="toc-continue" class="nav-link" data-scroll-target="#continue">Continue</a></li>
+  </ul></li>
+  <li><a href="#strings" id="toc-strings" class="nav-link" data-scroll-target="#strings">3. Strings</a></li>
+  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types">4. Data Types</a></li>
+  <li><a href="#math-and-numbers" id="toc-math-and-numbers" class="nav-link" data-scroll-target="#math-and-numbers">5. Math and Numbers</a>
+  <ul class="collapse">
+  <li><a href="#numbers" id="toc-numbers" class="nav-link" data-scroll-target="#numbers">Numbers</a></li>
+  <li><a href="#math" id="toc-math" class="nav-link" data-scroll-target="#math">Math</a></li>
+  </ul></li>
+  <li><a href="#function" id="toc-function" class="nav-link" data-scroll-target="#function">6. Function</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">7. Variables</a></li>
+  <li><a href="#operators" id="toc-operators" class="nav-link" data-scroll-target="#operators">8. Operators</a></li>
+  <li><a href="#arrays" id="toc-arrays" class="nav-link" data-scroll-target="#arrays">9. Arrays</a>
+  <ul class="collapse">
+  <li><a href="#array" id="toc-array" class="nav-link" data-scroll-target="#array">Array</a></li>
+  <li><a href="#array-methods" id="toc-array-methods" class="nav-link" data-scroll-target="#array-methods">Array Methods</a></li>
+  </ul></li>
+  <li><a href="#objects" id="toc-objects" class="nav-link" data-scroll-target="#objects">10. Objects</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">JS CheatSheet</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="javascript-cheat-sheet" class="level1">
+<h1>Javascript Cheat Sheet</h1>
+<p>Snippets para arrancar como avión!!</p>
+<section id="conditionals" class="level2">
+<h2 class="anchored" data-anchor-id="conditionals">1. Conditionals</h2>
+<section id="condicional-if" class="level3">
+<h3 class="anchored" data-anchor-id="condicional-if">Condicional If</h3>
+<p><code>if ((age &gt;= 14) &amp;&amp; (age &lt; 19)) {</code> // logical condition</p>
+<p><code>status = "Eligible.";</code> // executed if condition is true</p>
+<p><code>} else {</code> // else block is optional</p>
+<p><code>status = "Not eligible."; }</code> // executed if condition is false</p>
+</section>
+<section id="condición-switch" class="level3">
+<h3 class="anchored" data-anchor-id="condición-switch">Condición Switch</h3>
+<p><code>switch (new Date().getDay()) {</code> // input is current day</p>
+<p><code>case 6:</code> // if (day == 6)</p>
+<p><code>text = "Saturday";</code></p>
+<p><code>break;</code></p>
+<p><code>case 0:</code> // if (day == 0)</p>
+<p><code>text = "Sunday";</code></p>
+<p><code>break;</code></p>
+<p><code>default:</code> // else…</p>
+<p><code>text = "Whatever"; }</code></p>
+</section>
+</section>
+<section id="loops" class="level2">
+<h2 class="anchored" data-anchor-id="loops">2. Loops</h2>
+<section id="for-loop" class="level3">
+<h3 class="anchored" data-anchor-id="for-loop">For Loop</h3>
+<p><code>for (var i = 0; i &lt; 10; i++) {</code></p>
+<p><code>document.write(i + ": " + i*3 + "&lt;br /&gt;");</code></p>
+<p><code>}</code></p>
+<p><code>var sum = 0;</code></p>
+<p><code>for (var i = 0; i &lt; a.length; i++) {</code></p>
+<p><code>sum + = a[i];</code></p>
+<p><code>}</code> // parsing an array</p>
+<p><code>html = "";</code></p>
+<p><code>for (var i of custOrder) {</code></p>
+<p><code>html += "&lt;li&gt;" + i + "&lt;/li&gt;";</code></p>
+<p><code>}</code></p>
+</section>
+<section id="while-loop" class="level3">
+<h3 class="anchored" data-anchor-id="while-loop">While Loop</h3>
+<p><code>var i = 1;</code> // initialize</p>
+<p><code>while (i &lt; 100) {</code> // enters the cycle if statement is true</p>
+<p><code>i *= 2;</code> // increment to avoid infinite loop</p>
+<p><code>document.write(i + ", ");</code> // output</p>
+<p><code>}</code></p>
+</section>
+<section id="do-while" class="level3">
+<h3 class="anchored" data-anchor-id="do-while">Do While</h3>
+<p><code>var i = 1;</code> // initialize</p>
+<p><code>do {</code> // enters cycle at least once</p>
+<p><code>i *= 2;</code> // increment to avoid infinite loop</p>
+<p><code>document.write(i + ", ");</code> // output</p>
+<p><code>} while (i &lt; 100)</code> // repeats cycle if statement is true at the end</p>
+</section>
+<section id="break" class="level3">
+<h3 class="anchored" data-anchor-id="break">Break</h3>
+<p><code>for (var i = 0; i &lt; 10; i++) {</code></p>
+<p><code>if (i == 5) { break; }</code> // stops and exits the cycle</p>
+<p><code>document.write(i + ", ");</code> // last output number is 4</p>
+<p><code>}</code></p>
+</section>
+<section id="continue" class="level3">
+<h3 class="anchored" data-anchor-id="continue">Continue</h3>
+<p><code>for (var i = 0; i &lt; 10; i++) {</code></p>
+<p><code>if (i == 5) { continue; }</code> // skips the rest of the cycle</p>
+<p><code>document.write(i + ", ");</code> // skips 5</p>
+<p><code>}</code></p>
+</section>
+</section>
+<section id="strings" class="level2">
+<h2 class="anchored" data-anchor-id="strings">3. Strings</h2>
+<p><code>var abc = "abcdefghijklmnopqrstuvwxyz";</code></p>
+<p><code>var esc = 'I don\'t \n know';</code> // new line</p>
+<p><code>var len = abc.length;</code> // string length</p>
+<p><code>abc.indexOf("lmno");</code> // find substring, -1 if doesn’t contain</p>
+<p><code>abc.lastIndexOf("lmno");</code> // last occurance</p>
+<p><code>abc.slice(3, 6);</code> // cuts out “def”, negative values count from behind</p>
+<p><code>abc.replace("abc","123");</code> // find and replace, takes regular expressions</p>
+<p><code>abc.toUpperCase();</code> // convert to upper case</p>
+<p><code>abc.toLowerCase();</code> // convert to lower case</p>
+<p><code>abc.concat(" ", str2);</code> // abc + ” ” + str2</p>
+<p><code>abc.charAt(2);</code> // character at index: “c”</p>
+<p><code>abc[2];</code> // unsafe, abc[2] = “C” doesn’t work</p>
+<p><code>abc.charCodeAt(2);</code> // character code at index: “c” -&gt; 99</p>
+<p><code>abc.split(",");</code> // splitting a string on commas gives an array</p>
+<p><code>abc.split("");</code> // splitting on characters</p>
+<p><code>128.toString(16);</code> // number to hex(16), octal (8) or binary (2)</p>
+</section>
+<section id="data-types" class="level2">
+<h2 class="anchored" data-anchor-id="data-types">4. Data Types</h2>
+<p><code>var age = 18;</code> // number</p>
+<p><code>var name = "Jane";</code> // string</p>
+<p><code>var name = {first:"Jane", last:"Doe"};</code> // object</p>
+<p><code>var truth = false;</code> // boolean</p>
+<p><code>var sheets = ["HTML","CSS","JS"];</code> // array</p>
+<p><code>var a; typeof a;</code> // undefined</p>
+<p><code>var a = null;</code></p>
+</section>
+<section id="math-and-numbers" class="level2">
+<h2 class="anchored" data-anchor-id="math-and-numbers">5. Math and Numbers</h2>
+<section id="numbers" class="level3">
+<h3 class="anchored" data-anchor-id="numbers">Numbers</h3>
+<p><code>var pi = 3.141;</code> <code>pi.toFixed(0);</code> // returns 3</p>
+<p><code>pi.toFixed(2);</code> // returns 3.14 - for working with money</p>
+<p><code>pi.toPrecision(2)</code> // returns 3.1</p>
+<p><code>pi.valueOf();</code> // returns number</p>
+<p><code>Number(true);</code> // converts to number</p>
+<p><code>Number(new Date())</code> // number of milliseconds since 1970</p>
+<p><code>parseInt("3 months");</code> // returns the first number: 3</p>
+<p><code>parseFloat("3.5 days");</code> // returns 3.5</p>
+<p><code>Number.MAX_VALUE</code> // largest possible JS number</p>
+<p><code>Number.MIN_VALUE</code> // smallest possible JS number</p>
+<p><code>Number.NEGATIVE_INFINITY</code> // -Infinity</p>
+<p><code>Number.POSITIVE_INFINITY</code> // Infinity</p>
+</section>
+<section id="math" class="level3">
+<h3 class="anchored" data-anchor-id="math">Math</h3>
+<p><code>var pi = Math.PI;</code> // 3.141592653589793</p>
+<p><code>Math.round(4.4);</code> // = 4 - rounded</p>
+<p><code>Math.round(4.5);</code> // = 5</p>
+<p><code>Math.pow(2,8);</code> // = 256 - 2 to the power of 8</p>
+<p><code>Math.sqrt(49);</code> // = 7 - square root</p>
+<p><code>Math.abs(-3.14);</code> // = 3.14 - absolute, positive value</p>
+<p><code>Math.ceil(3.14);</code> // = 4 - rounded up</p>
+<p><code>Math.floor(3.99);</code> // = 3 - rounded down</p>
+<p><code>Math.sin(0);</code> // = 0 - sine</p>
+<p><code>Math.cos(Math.PI);</code> // OTHERS: tan,atan,asin,acos,</p>
+<p><code>Math.min(0, 3, -2, 2);</code> // = -2 - the lowest value</p>
+<p><code>Math.max(0, 3, -2, 2);</code> // = 3 - the highest value</p>
+<p><code>Math.log(1);</code> // = 0 natural logarithm</p>
+<p><code>Math.exp(1);</code> // = 2.7182pow(E,x)</p>
+<p><code>Math.random();</code> // random number between 0 and 1</p>
+<p><code>Math.floor(Math.random() * 5) + 1;</code> // random integer, from 1 to 5</p>
+</section>
+</section>
+<section id="function" class="level2">
+<h2 class="anchored" data-anchor-id="function">6. Function</h2>
+<p><code>function addNumbers(a, b) {</code> <code>return a + b; ;</code> <code>}</code></p>
+<p><code>x = addNumbers(1, 2);</code></p>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">7. Variables</h2>
+<p><code>var a;</code> // variable</p>
+<p><code>var b = "init";</code> // string</p>
+<p><code>var c = "Hi" + " " + "Joe";</code> // = “Hi Joe”</p>
+<p><code>var d = 1 + 2 + "3";</code> // = “33”</p>
+<p><code>var e = [2,3,5,8];</code> // array</p>
+<p><code>var f = false;</code> // boolean</p>
+<p><code>var g = /()/;</code> // RegEx</p>
+<p><code>var h = function(){};</code> // function object</p>
+<p><code>const PI = 3.14;</code> // constant</p>
+<p><code>var a = 1, b = 2, c = a + b;</code> // one line</p>
+<p><code>let z = 'zzz';</code> // block scope local variable</p>
+</section>
+<section id="operators" class="level2">
+<h2 class="anchored" data-anchor-id="operators">8. Operators</h2>
+<p><code>a = b + c - d;</code> // addition, substraction</p>
+<p><code>a = b * (c / d);</code> // multiplication, division</p>
+<p><code>x = 100 % 48;</code> // modulo. 100 / 48 remainder = 4</p>
+<p><code>a++; b--;</code> // postfix increment and decrement</p>
+</section>
+<section id="arrays" class="level2">
+<h2 class="anchored" data-anchor-id="arrays">9. Arrays</h2>
+<section id="array" class="level3">
+<h3 class="anchored" data-anchor-id="array">Array</h3>
+<p><code>var dogs = ["Bulldog", "Beagle", "Labrador"];</code></p>
+<p><code>var dogs = new Array("Bulldog", "Beagle", "Labrador");</code> // declaration</p>
+<p><code>alert(dogs[1]);</code> // access value at index, first item being [0]</p>
+<p><code>dogs[0] = "Bull Terier";</code> // change the first item</p>
+<p><code>for (var i = 0; i &lt; dogs.length; i++) {</code> // parsing with array.length</p>
+<p><code>console.log(dogs[i]);</code></p>
+<p><code>}</code></p>
+</section>
+<section id="array-methods" class="level3">
+<h3 class="anchored" data-anchor-id="array-methods">Array Methods</h3>
+<p><code>dogs.toString();</code> // convert to string: results “Bulldog,Beagle,Labrador”</p>
+<p><code>dogs.join(" * ");</code> // join: “Bulldog * Beagle * Labrador”</p>
+<p><code>dogs.pop();</code> // remove last element</p>
+<p><code>dogs.push("Chihuahua");</code> // add new element to the end</p>
+<p><code>dogs[dogs.length] = "Chihuahua";</code> // the same as push</p>
+<p><code>dogs.shift();</code> // remove first element</p>
+<p><code>dogs.unshift("Chihuahua");</code> // add new element to the beginning</p>
+<p><code>delete dogs[0];</code> // change element to undefined (not recommended)</p>
+<p><code>dogs.splice(2, 0, "Pug", "Boxer");</code> // add elements (where, how many to remove, element list)</p>
+<p><code>var animals = dogs.concat(cats,birds);</code> // join two arrays (dogs followed by cats and birds)</p>
+<p><code>dogs.slice(1,4);</code> // elements from [1] to [4-1]</p>
+<p><code>dogs.sort();</code> // sort string alphabetically</p>
+<p><code>dogs.reverse();</code> // sort string in descending order</p>
+<p><code>x.sort(function(a, b){return a - b});</code> // numeric sort</p>
+<p><code>x.sort(function(a, b){return b - a});</code> // numeric descending sort</p>
+<p><code>highest = x[0];</code> // first item in sorted array is the lowest (or highest) value</p>
+<p><code>x.sort(function(a, b){return 0.5 - Math.random()});</code> // random order sort</p>
+</section>
+</section>
+<section id="objects" class="level2">
+<h2 class="anchored" data-anchor-id="objects">10. Objects</h2>
+<p><code>var student = {</code> // object name</p>
+<p><code>firstName:"Jane",</code> // list of properties and values</p>
+<p><code>lastName:"Doe",</code></p>
+<p><code>age:18,</code></p>
+<p><code>height:170,</code></p>
+<p><code>fullName : function() {</code> // object function</p>
+<p><code>return this.firstName + " " + this.lastName;</code></p>
+<p><code>}</code> <code>};</code> <code>student.age = 19;</code> // setting value</p>
+<p><code>student[age]++;</code> // incrementing</p>
+<p><code>name = student.fullName();</code> // call object function</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
