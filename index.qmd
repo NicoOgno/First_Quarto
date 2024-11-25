@@ -1,0 +1,11 @@
+---
+title: "Javascript Playground"
+---
+
+# Bienvenido al Playground Oficial de Javascript con Quarto
+
+Esta es una página para probar códigos de Javascript. En este sitio podrás jugar y testear tus snippets.
+
+Para aprender más sobre cómo crear sitios web en Quarto, visita la documentación oficial en [Quarto Websites](https://quarto.org/docs/websites).
+Para aprender más sobre cJavascript, visita esta documentación en [Javascript Websites](https://developer.mozilla.org/es/docs/Web/JavaScript).
+

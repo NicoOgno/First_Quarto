@@ -1,0 +1,43 @@
+---
+title: "Juega con Javascript"
+format: html
+---
+
+# Juega con Javascript
+
+<textarea id="codeInput" rows="10" cols="50">
+// Escribe tu código aquí...
+console.log('¡Hola, mundo!');
+</textarea>
+
+<button onclick="runCode()">Ejecutar código</button>
+
+<div id="outputDiv" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; background-color: #f9f9f9;">
+    <!-- Aquí se mostrarán los resultados -->
+</div>
+
+<script>
+function runCode() {
+    // Obtener el código del textarea
+    var code = document.getElementById("codeInput").value;
+    
+    // Obtener el div donde se mostrarán los resultados
+    var outputDiv = document.getElementById("outputDiv");
+    
+    try {
+        // Limpiar cualquier contenido previo en el div
+        outputDiv.innerHTML = "Resultado: <br>";
+
+        // Sobrescribir console.log para mostrar los resultados en el div
+        console.log = function(message) {
+            outputDiv.innerHTML += message + "<br>";
+        };
+
+        // Ejecutar el código usando eval y mostrar los resultados en el div
+        eval(code);
+    } catch (e) {
+        // Mostrar errores en el div
+        outputDiv.innerHTML += "<span style='color: red;'>Error en el código: " + e.message + "</span>";
+    }
+}
+</script>

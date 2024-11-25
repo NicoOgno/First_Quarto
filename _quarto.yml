@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "JS Playground"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: CheatSheet
+      - href: play_js.qmd
+        text: JS Sandbox
+
+format:
+  html:
+    theme: cosmo  # Puedes cambiar a otro tema si lo deseas
+    css: styles.css
+    toc: true
+
+
