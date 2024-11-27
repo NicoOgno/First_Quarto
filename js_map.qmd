@@ -3,7 +3,7 @@ title: "JS Concepts"
 format: html
 ---
 
-# Javascript Learn Map
+# Javascript Concepts you must learn!
 
 ```{mermaid}
 
