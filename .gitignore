@@ -6,3 +6,4 @@
 /_qtool/
 /.luarc.json
 publish_quarto.sh
+log.txt
