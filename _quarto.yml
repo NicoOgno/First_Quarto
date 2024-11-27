@@ -10,6 +10,8 @@ website:
         text: Home
       - href: about.qmd
         text: CheatSheet
+      - href: js_map.qmd
+        text: JS Concepts
       - href: play_js.qmd
         text: JS Sandbox
 

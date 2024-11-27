@@ -1,0 +1,57 @@
+---
+title: "JS Concepts"
+format: html
+---
+
+# Javascript Learn Map
+
+```{mermaid}
+
+flowchart LR
+    A[JavaScript Basics] --> B[Variables]
+    A --> C[Tipos de Datos]
+    A --> D[Operadores]
+    A --> E[Control de Flujo]
+    A --> F[Funciones]
+```
+
+
+```{mermaid}
+
+flowchart LR
+    B[Variables] --> G[Declaración de Variables: var, let, const]
+    C[Tipos de Datos] --> H[Primitivos: String, Number, Boolean, Null, Undefined]
+    C[Tipos de Datos] --> I[Objetos]
+    D[Operadores] --> J[Operadores Aritméticos]
+    D[Operadores] --> K[Operadores de Comparación]
+    D[Operadores] --> L[Operadores Lógicos]
+    E[Control de Flujo] --> M[Estructuras de Control: if, switch]
+    E[Control de Flujo] --> N[Bucles: for, while, do-while]
+    F[Funciones] --> O[Funciones Declaradas]
+    F[Funciones] --> P[Funciones Anónimas]
+    F[Funciones] --> Q[Funciones de Flecha]
+```
+
+```{mermaid}
+
+flowchart LR
+    I[Objetos] --> R[Arrays]
+    I[Objetos] --> S[Objetos Literales]
+    I[Objetos] --> T[Funciones como Objetos]
+    
+    G[Declaración de Variables] --> U[Alcance: Scope y Hoisting]
+    U --> V[Ámbito de Bloque]
+    U --> W[Hoisting de Variables y Funciones]
+    H[Primitivos] --> X[Coerción de Tipos]
+```
+
+```{mermaid}
+
+flowchart LR
+    V[Ámbito de Bloque] --> Y[Closures]
+    Y[Closures] --> Z[Funciones de Orden Superior]
+    Z[Funciones de Orden Superior] --> AA[Callbacks]
+
+    AA[Callbacks] --> AB[Promesas]
+    AB[Promesas] --> AC[Async / Await]
+```
