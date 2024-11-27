@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "play_js.html",
-    "href": "play_js.html",
-    "title": "Juega con Javascript",
-    "section": "",
-    "text": "Juega con Javascript\n// Escribe tu código aquí...\nconsole.log('¡Hola, mundo!');\n\n\nEjecutar código\n\n\n&lt;!-- Aquí se mostrarán los resultados --&gt;"
-  },
-  {
-    "objectID": "js_map.html",
-    "href": "js_map.html",
-    "title": "JS Concepts",
-    "section": "",
-    "text": "Javascript Learn Map\n\n\n\n\n\nflowchart LR\n    A[JavaScript Basics] --&gt; B[Variables]\n    A --&gt; C[Tipos de Datos]\n    A --&gt; D[Operadores]\n    A --&gt; E[Control de Flujo]\n    A --&gt; F[Funciones]\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n    B[Variables] --&gt; G[Declaración de Variables: var, let, const]\n    C[Tipos de Datos] --&gt; H[Primitivos: String, Number, Boolean, Null, Undefined]\n    C[Tipos de Datos] --&gt; I[Objetos]\n    D[Operadores] --&gt; J[Operadores Aritméticos]\n    D[Operadores] --&gt; K[Operadores de Comparación]\n    D[Operadores] --&gt; L[Operadores Lógicos]\n    E[Control de Flujo] --&gt; M[Estructuras de Control: if, switch]\n    E[Control de Flujo] --&gt; N[Bucles: for, while, do-while]\n    F[Funciones] --&gt; O[Funciones Declaradas]\n    F[Funciones] --&gt; P[Funciones Anónimas]\n    F[Funciones] --&gt; Q[Funciones de Flecha]\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n    I[Objetos] --&gt; R[Arrays]\n    I[Objetos] --&gt; S[Objetos Literales]\n    I[Objetos] --&gt; T[Funciones como Objetos]\n    \n    G[Declaración de Variables] --&gt; U[Alcance: Scope y Hoisting]\n    U --&gt; V[Ámbito de Bloque]\n    U --&gt; W[Hoisting de Variables y Funciones]\n    H[Primitivos] --&gt; X[Coerción de Tipos]\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n    V[Ámbito de Bloque] --&gt; Y[Closures]\n    Y[Closures] --&gt; Z[Funciones de Orden Superior]\n    Z[Funciones de Orden Superior] --&gt; AA[Callbacks]\n\n    AA[Callbacks] --&gt; AB[Promesas]\n    AB[Promesas] --&gt; AC[Async / Await]"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "JS CheatSheet",
@@ -89,6 +75,20 @@
     "title": "JS CheatSheet",
     "section": "",
     "text": "var student = { // object name\nfirstName:\"Jane\", // list of properties and values\nlastName:\"Doe\",\nage:18,\nheight:170,\nfullName : function() { // object function\nreturn this.firstName + \" \" + this.lastName;\n} }; student.age = 19; // setting value\nstudent[age]++; // incrementing\nname = student.fullName(); // call object function"
+  },
+  {
+    "objectID": "play_js.html",
+    "href": "play_js.html",
+    "title": "Juega con Javascript",
+    "section": "",
+    "text": "Juega con Javascript\n// Escribe tu código aquí...\nconsole.log('¡Hola, mundo!');\n\n\nEjecutar código\n\n\n&lt;!-- Aquí se mostrarán los resultados --&gt;"
+  },
+  {
+    "objectID": "js_map.html",
+    "href": "js_map.html",
+    "title": "JS Concepts",
+    "section": "",
+    "text": "Javascript Learn Map\n\n\n\n\n\nflowchart LR\n    A[JavaScript Basics] --&gt; B[Variables]\n    A --&gt; C[Tipos de Datos]\n    A --&gt; D[Operadores]\n    A --&gt; E[Control de Flujo]\n    A --&gt; F[Funciones]\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n    B[Variables] --&gt; G[Declaración de Variables: var, let, const]\n    C[Tipos de Datos] --&gt; H[Primitivos: String, Number, Boolean, Null, Undefined]\n    C[Tipos de Datos] --&gt; I[Objetos]\n    D[Operadores] --&gt; J[Operadores Aritméticos]\n    D[Operadores] --&gt; K[Operadores de Comparación]\n    D[Operadores] --&gt; L[Operadores Lógicos]\n    E[Control de Flujo] --&gt; M[Estructuras de Control: if, switch]\n    E[Control de Flujo] --&gt; N[Bucles: for, while, do-while]\n    F[Funciones] --&gt; O[Funciones Declaradas]\n    F[Funciones] --&gt; P[Funciones Anónimas]\n    F[Funciones] --&gt; Q[Funciones de Flecha]\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n    I[Objetos] --&gt; R[Arrays]\n    I[Objetos] --&gt; S[Objetos Literales]\n    I[Objetos] --&gt; T[Funciones como Objetos]\n    \n    G[Declaración de Variables] --&gt; U[Alcance: Scope y Hoisting]\n    U --&gt; V[Ámbito de Bloque]\n    U --&gt; W[Hoisting de Variables y Funciones]\n    H[Primitivos] --&gt; X[Coerción de Tipos]\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n    V[Ámbito de Bloque] --&gt; Y[Closures]\n    Y[Closures] --&gt; Z[Funciones de Orden Superior]\n    Z[Funciones de Orden Superior] --&gt; AA[Callbacks]\n\n    AA[Callbacks] --&gt; AB[Promesas]\n    AB[Promesas] --&gt; AC[Async / Await]"
   },
   {
     "objectID": "index.html",
