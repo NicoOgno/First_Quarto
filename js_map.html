@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Javascript Playground – JS Playground</title>
+<title>JS Concepts – JS Playground</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -91,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -99,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">CheatSheet</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./js_map.html"> 
+    <a class="nav-link active" href="./js_map.html" aria-current="page"> 
 <span class="menu-text">JS Concepts</span></a>
   </li>  
   <li class="nav-item">
@@ -128,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#bienvenido-al-playground-oficial-de-javascript-creado-con-quarto" id="toc-bienvenido-al-playground-oficial-de-javascript-creado-con-quarto" class="nav-link active" data-scroll-target="#bienvenido-al-playground-oficial-de-javascript-creado-con-quarto">Bienvenido al Playground Oficial de Javascript creado con Quarto</a></li>
+  <li><a href="#javascript-learn-map" id="toc-javascript-learn-map" class="nav-link active" data-scroll-target="#javascript-learn-map">Javascript Learn Map</a></li>
   </ul>
 </nav>
     </div>
@@ -137,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Javascript Playground</h1>
+<h1 class="title">JS Concepts</h1>
 </div>
 
 
@@ -154,10 +157,86 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="bienvenido-al-playground-oficial-de-javascript-creado-con-quarto" class="level1">
-<h1>Bienvenido al Playground Oficial de Javascript creado con Quarto</h1>
-<p>Esta es una página para probar códigos de Javascript. En este sitio podrás jugar y testear tus snippets.</p>
-<p>Para aprender más sobre cómo crear sitios web en Quarto, visita la documentación oficial en <a href="https://quarto.org/docs/websites">Quarto Websites</a>. Para aprender más sobre cJavascript, visita esta documentación en <a href="https://developer.mozilla.org/es/docs/Web/JavaScript">Javascript Websites</a>.</p>
+<section id="javascript-learn-map" class="level1">
+<h1>Javascript Learn Map</h1>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[JavaScript Basics] --&gt; B[Variables]
+    A --&gt; C[Tipos de Datos]
+    A --&gt; D[Operadores]
+    A --&gt; E[Control de Flujo]
+    A --&gt; F[Funciones]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    B[Variables] --&gt; G[Declaración de Variables: var, let, const]
+    C[Tipos de Datos] --&gt; H[Primitivos: String, Number, Boolean, Null, Undefined]
+    C[Tipos de Datos] --&gt; I[Objetos]
+    D[Operadores] --&gt; J[Operadores Aritméticos]
+    D[Operadores] --&gt; K[Operadores de Comparación]
+    D[Operadores] --&gt; L[Operadores Lógicos]
+    E[Control de Flujo] --&gt; M[Estructuras de Control: if, switch]
+    E[Control de Flujo] --&gt; N[Bucles: for, while, do-while]
+    F[Funciones] --&gt; O[Funciones Declaradas]
+    F[Funciones] --&gt; P[Funciones Anónimas]
+    F[Funciones] --&gt; Q[Funciones de Flecha]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    I[Objetos] --&gt; R[Arrays]
+    I[Objetos] --&gt; S[Objetos Literales]
+    I[Objetos] --&gt; T[Funciones como Objetos]
+    
+    G[Declaración de Variables] --&gt; U[Alcance: Scope y Hoisting]
+    U --&gt; V[Ámbito de Bloque]
+    U --&gt; W[Hoisting de Variables y Funciones]
+    H[Primitivos] --&gt; X[Coerción de Tipos]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    V[Ámbito de Bloque] --&gt; Y[Closures]
+    Y[Closures] --&gt; Z[Funciones de Orden Superior]
+    Z[Funciones de Orden Superior] --&gt; AA[Callbacks]
+
+    AA[Callbacks] --&gt; AB[Promesas]
+    AB[Promesas] --&gt; AC[Async / Await]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 
 
 </section>
